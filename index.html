@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-Min Hypnose — Kostenlos | GLOW by Franziska Rätz</title>
+  <meta name="description" content="Kostenlose 11-Minuten-Hypnose für Frauen, die funktionieren — aber sich fragen, wann sie zuletzt wirklich sie selbst waren.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bordeaux: #671430;
+      --bordeaux-dark: #4a0e22;
+      --gold: #a68f7b;
+      --gold-light: #c4aa93;
+      --dunkelgrau: #262524;
+      --hellgrau: #f4f2f2;
+      --pastel: #d9d4cc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--dunkelgrau);
+      color: var(--hellgrau);
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background:
+        linear-gradient(160deg, rgba(74,14,34,0.82) 0%, rgba(103,20,48,0.72) 55%, rgba(122,24,53,0.80) 100%),
+        url('./img/franziska-hero.jpg') center 20% / cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 660px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 36px;
+      display: block;
+    }
+
+    .gold-bar {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 36px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(38px, 8vw, 68px);
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 300;
+      color: rgba(244,242,242,0.82);
+      max-width: 500px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+    }
+
+    /* ── FORM ── */
+    .form-card {
+      background: rgba(0,0,0,0.28);
+      border: 1px solid rgba(196,170,147,0.28);
+      padding: 38px 32px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .form-card-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      display: block;
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 15px 18px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(196,170,147,0.25);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+
+    .field input::placeholder { color: rgba(244,242,242,0.35); }
+    .field input:focus { border-color: var(--gold-light); }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 10px;
+      padding: 17px;
+      background: var(--gold);
+      color: var(--dunkelgrau);
+      border: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-submit:hover { background: var(--gold-light); }
+    .btn-submit:active { transform: scale(0.99); }
+    .btn-submit:disabled { opacity: 0.6; cursor: default; }
+
+    .privacy-note {
+      font-size: 12px;
+      color: rgba(244,242,242,0.35);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .success-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 48px;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .success-state h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .success-state p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(244,242,242,0.75);
+      line-height: 1.75;
+    }
+
+    /* ── PATTERNS ── */
+    .section-patterns {
+      background: var(--dunkelgrau);
+      padding: 90px 24px;
+    }
+
+    .section-inner { max-width: 660px; margin: 0 auto; }
+
+    .section-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .section-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4.5vw, 40px);
+      font-weight: 400;
+      color: var(--hellgrau);
+      line-height: 1.3;
+      margin-bottom: 50px;
+    }
+
+    .patterns {
+      list-style: none;
+    }
+
+    .patterns li {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(166,143,123,0.14);
+    }
+
+    .patterns li:first-child { border-top: 1px solid rgba(166,143,123,0.14); }
+
+    .p-nr {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 34px;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 26px;
+      margin-top: 4px;
+    }
+
+    .p-text {
+      font-size: 16px;
+      color: var(--pastel);
+      line-height: 1.75;
+    }
+
+    .p-text strong {
+      color: var(--hellgrau);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ── WHAT YOU GET ── */
+    .section-get {
+      background: #1f1d1c;
+      padding: 90px 24px;
+    }
+
+    .get-box {
+      border: 1px solid rgba(166,143,123,0.25);
+      padding: 48px 40px;
+    }
+
+    .get-box .section-tag { margin-bottom: 22px; }
+
+    .get-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 32px;
+    }
+
+    .get-list {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+
+    .get-list li {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: var(--pastel);
+      line-height: 1.7;
+    }
+
+    .get-list li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .get-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--gold-light);
+      line-height: 1.65;
+      padding-top: 28px;
+      border-top: 1px solid rgba(166,143,123,0.2);
+    }
+
+    /* ── TESTIMONIAL ── */
+    .section-testimonial {
+      background: var(--bordeaux-dark);
+      padding: 90px 24px;
+      text-align: center;
+    }
+
+    .t-bar {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 36px;
+    }
+
+    blockquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    .t-meta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    /* ── ABOUT ── */
+    .section-about {
+      background: var(--dunkelgrau);
+      padding: 90px 24px;
+    }
+
+    .about-inner {
+      max-width: 660px;
+      margin: 0 auto;
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    .about-photo {
+      width: 220px;
+      height: 290px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border: 1px solid rgba(166,143,123,0.2);
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-text .section-tag { margin-bottom: 14px; }
+
+    .about-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--hellgrau);
+      margin-bottom: 18px;
+    }
+
+    .about-name span {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .about-body {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--pastel);
+      line-height: 1.8;
+    }
+
+    .about-body strong { color: var(--hellgrau); font-weight: 500; }
+
+    /* ── MOOD PHOTO ── */
+    .section-mood {
+      height: 420px;
+      background: url('./img/franziska-mood.jpg') center 35% / cover no-repeat;
+      position: relative;
+    }
+
+    .section-mood::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(26,24,23,0.3) 0%, rgba(26,24,23,0.55) 100%);
+    }
+
+    /* ── BOTTOM CTA ── */
+    .section-cta {
+      background: #1f1d1c;
+      padding: 90px 24px;
+      text-align: center;
+    }
+
+    .cta-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .cta-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--pastel);
+      max-width: 440px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+    }
+
+    .cta-form-wrap { max-width: 440px; margin: 0 auto; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #191717;
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(244,242,242,0.28);
+      line-height: 2;
+    }
+
+    footer a { color: rgba(244,242,242,0.35); text-decoration: none; }
+    footer a:hover { color: var(--gold-light); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 620px) {
+      .about-inner { flex-direction: column; gap: 28px; }
+      .about-photo { width: 100%; height: 120px; }
+      .form-card { padding: 28px 20px; }
+      .get-box { padding: 32px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════ HERO ════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <span class="brand-label">GLOW by Franziska Rätz</span>
+    <div class="gold-bar"></div>
+
+    <h1>Von außen.<br><em>Zurück zu dir.</em></h1>
+
+    <p class="hero-sub">
+      Eine kostenlose 11-Minuten-Hypnose für Frauen,<br>
+      die funktionieren — aber sich fragen, wann sie zuletzt<br>
+      wirklich <em style="font-style:italic;">sie selbst</em> waren.
+    </p>
+
+    <!-- FORM CARD -->
+    <div class="form-card">
+      <span class="form-card-label">Deine kostenlose Hypnose</span>
+
+      <form id="form-hero" novalidate>
+        <div class="field">
+          <input type="text" id="h-name" name="FIRSTNAME" placeholder="Dein Vorname" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <input type="email" id="h-email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+        </div>
+        <button type="submit" class="btn-submit">Jetzt kostenlos erhalten →</button>
+        <p class="privacy-note">Kein Spam. Kein Bullshit. Jederzeit abmeldbar.</p>
+      </form>
+
+      <div class="success-state" id="success-hero">
+        <div class="success-icon">✦</div>
+        <h3>Geschafft.</h3>
+        <p>Deine Hypnose ist direkt hier — du kannst sie jetzt anhören:</p>
+        <a href="https://drive.google.com/file/d/1vzhICT9QJHo3MH-wGiNAbhJ7TR4l4N0r/view?usp=sharing"
+           target="_blank" rel="noopener"
+           style="display:inline-block;margin-top:20px;padding:16px 36px;background:var(--gold);color:#1a0a10;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border-radius:2px;">
+          ▶ &nbsp;Jetzt anhören
+        </a>
+        <p style="margin-top:20px;font-size:13px;opacity:0.65;line-height:1.7;">
+          Deine E-Mail ist außerdem unterwegs — schau auch in deinen Spam-Ordner.<br>
+          Mit der Anmeldung stimmst du zu, gelegentlich inspirierende Mails von Franziska zu erhalten. Jederzeit abmeldbar.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════ PATTERNS ════════════════════════════════ -->
+<section class="section-patterns">
+  <div class="section-inner">
+    <span class="section-tag">Für dich, wenn...</span>
+    <h2 class="section-headline">Du funktionierst —<br>aber weißt nicht mehr, für wen.</h2>
+
+    <ul class="patterns">
+      <li>
+        <span class="p-nr">1</span>
+        <span class="p-text">
+          <strong>Du tust ständig so, als wäre alles okay.</strong>
+          Nach außen: alles im Griff. Innen: du fragst dich, wann das Kartenhaus einstürzt.
+        </span>
+      </li>
+      <li>
+        <span class="p-nr">2</span>
+        <span class="p-text">
+          <strong>Schlechte Stimmung im Raum — und du spürst es sofort.</strong>
+          Irgendjemand ist schlecht drauf und du rettest es automatisch. Ohne gefragt zu werden.
+        </span>
+      </li>
+      <li>
+        <span class="p-nr">3</span>
+        <span class="p-text">
+          <strong>Du entscheidest nach dem, was andere denken könnten.</strong>
+          Nicht nach dem, was DU willst. Was würde man denken? Was ist "angemessen"?
+        </span>
+      </li>
+      <li>
+        <span class="p-nr">4</span>
+        <span class="p-text">
+          <strong>Du bist erschöpft — aber du weißt nicht warum.</strong>
+          Du "tust ja eigentlich nicht viel". Nur dass du konstant auf Empfang bist.
+        </span>
+      </li>
+      <li>
+        <span class="p-nr">5</span>
+        <span class="p-text">
+          <strong>Du weißt nicht mehr genau, was du willst.</strong>
+          Nur was andere von dir wollen.
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════ WHAT YOU GET ════════════════════════════ -->
+<section class="section-get">
+  <div class="section-inner">
+    <div class="get-box">
+      <span class="section-tag">Was dich erwartet</span>
+      <h2 class="get-title">11 Minuten Hypnose.<br>Kostenlos. Kein Aufwand.</h2>
+      <ul class="get-list">
+        <li>Geführte Hypnose direkt ins Unterbewusstsein — da, wo die Muster sitzen</li>
+        <li>Von "ich funktioniere für alle" zurück zu "ich fühle, was ich fühle"</li>
+        <li>Keine Affirmationen, die sich fake anfühlen — echte Tiefenarbeit</li>
+        <li>Kein Aufwand: Kopfhörer rein, 11 Minuten, fertig</li>
+        <li>Sofort nach Eintragung per E-Mail — kostenlos</li>
+      </ul>
+      <p class="get-quote">
+        „Ich mache Frauen zu der Frau, die sie schon sind."<br>
+        — Franziska Rätz, Hypnosetherapeutin &amp; Coach
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ TESTIMONIAL ══════════════════════════════ -->
+<section class="section-testimonial">
+  <div class="section-inner" style="text-align:center;">
+    <div class="t-bar"></div>
+    <blockquote>
+      „Monatelang keine Panikattacken mehr —<br>
+      Wahnsinn, ohne Medikamente.<br>
+      Ich hab angefangen, mehr <em>ICH</em> zu sein."
+    </blockquote>
+    <div class="t-bar"></div>
+    <p class="t-meta">Anika · Immobilienkauffrau &amp; Mama</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════ MOOD PHOTO ══════════════════════════════ -->
+<div class="section-mood"></div>
+
+
+<!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+<section class="section-about">
+  <div class="about-inner">
+    <div class="about-photo">
+      <img src="./img/franziska-about.jpg" alt="Franziska Rätz" loading="lazy">
+    </div>
+    <div class="about-text">
+      <span class="section-tag">Über Franziska</span>
+      <h3 class="about-name">Franziska Rätz<br><span>Hypnosetherapeutin &amp; Coach</span></h3>
+      <p class="about-body">
+        Seit über <strong>5 Jahren</strong> begleite ich Frauen raus aus dem Außen — zurück zu sich selbst.<br><br>
+        Nicht mit Ratschlägen, die sich gut anhören. Sondern direkt da, wo die Muster sitzen: im Unterbewusstsein.<br><br>
+        Ich habe über <strong>300 Frauen</strong> begleitet. Was sie alle teilen: Sie funktionieren. Sie liefern. Sie sind stark.<br><br>
+        Und irgendwann fragen sie sich: Wann war ich das zuletzt wirklich für <em style="font-style:italic; color: var(--gold-light);">mich?</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════ BOTTOM CTA ══════════════════════════════ -->
+<section class="section-cta">
+  <div class="section-inner">
+    <h2 class="cta-headline">Dein Körper<br>weiß es schon.</h2>
+    <p class="cta-sub">11 Minuten. Kostenlos. Und du weißt wieder, wer du bist.</p>
+
+    <div class="cta-form-wrap">
+      <div class="form-card" style="max-width:100%;">
+        <span class="form-card-label">Jetzt eintragen</span>
+        <form id="form-bottom" novalidate>
+          <div class="field">
+            <input type="text" name="FIRSTNAME" placeholder="Dein Vorname" required>
+          </div>
+          <div class="field">
+            <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+          </div>
+          <button type="submit" class="btn-submit">Kostenlos erhalten →</button>
+          <p class="privacy-note">Kein Spam. Jederzeit abmeldbar.</p>
+        </form>
+        <div class="success-state" id="success-bottom">
+          <div class="success-icon">✦</div>
+          <h3>Perfekt.</h3>
+          <p>Deine Hypnose ist direkt hier — hör direkt rein:</p>
+          <a href="https://drive.google.com/file/d/1vzhICT9QJHo3MH-wGiNAbhJ7TR4l4N0r/view?usp=sharing"
+             target="_blank" rel="noopener"
+             style="display:inline-block;margin-top:16px;padding:14px 32px;background:var(--gold);color:#1a0a10;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border-radius:2px;">
+            ▶ &nbsp;Jetzt anhören
+          </a>
+          <p style="margin-top:16px;font-size:13px;opacity:0.65;line-height:1.7;">
+            Eine E-Mail kommt auch noch. Jederzeit abmeldbar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════ FOOTER ══════════════════════════════════ -->
+<footer>
+  <p>© 2026 GLOW by Franziska Rätz</p>
+  <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+  <p style="margin-top:6px;">franziska@deine-zellgesundheit.de</p>
+</footer>
+
+
+<!-- ════════════════════════════ SCRIPT ══════════════════════════════════ -->
+<script>
+  // Railway → Brevo Liste 15 → Automation #6 (Welcome Sequence)
+  const SIGNUP_URL = 'https://soma-brand-production.up.railway.app/franzi-signup';
+
+  async function signUp(firstName, email) {
+    const res = await fetch(SIGNUP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, firstName, VORNAME: firstName, name: firstName })
+    });
+    // Zapier returns 200 even if Zap has issues — we show success regardless
+    if (!res.ok) throw new Error('Fehler ' + res.status);
+  }
+
+  function wireForm(formId, successId, btnDefault) {
+    const form = document.getElementById(formId);
+    const success = document.getElementById(successId);
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nameEl  = form.querySelector('input[type="text"]');
+      const emailEl = form.querySelector('input[type="email"]');
+      const btn     = form.querySelector('.btn-submit');
+
+      const firstName = nameEl.value.trim();
+      const email     = emailEl.value.trim();
+
+      if (!firstName || !email.includes('@')) {
+        alert('Bitte Vorname und E-Mail eingeben.');
+        return;
+      }
+
+      btn.textContent = 'Einen Moment...';
+      btn.disabled = true;
+
+      try {
+        await signUp(firstName, email);
+      } catch (err) {
+        console.warn('Webhook-Fehler (non-blocking):', err.message);
+        // Show success anyway — audio link is directly accessible
+      }
+      form.style.display = 'none';
+      success.style.display = 'block';
+    });
+  }
+
+  wireForm('form-hero',   'success-hero',   'Jetzt kostenlos erhalten →');
+  wireForm('form-bottom', 'success-bottom', 'Kostenlos erhalten →');
+</script>
+
+</body>
+</html>
